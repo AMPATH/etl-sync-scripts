@@ -10,7 +10,7 @@ class ScheduleHivSummary {
 
     runJob() {
         return new Promise((resolve, reject) => {
-            let sql = `CALL schedule_hiv_summary()`;
+            let sql = `CALL schedule_appointments()`;
 
             queryRunner.runQuery(sql)
                 .then((result) => {
