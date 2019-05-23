@@ -25,7 +25,7 @@ class BuildAppointment {
                     let queries = [];
 
                     for(let i =0; i < batches; i++) {
-                        let qry = `call generate_flat_appointment_v1_1("sync",${i},20,20);`;
+                        let qry = `call generate_appointment_v1_1("build",${i},50,20);`;
                         queries.push(queryRunner.runQuery(qry));
                     }
 
