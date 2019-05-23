@@ -18,7 +18,7 @@ class BuildAppointment {
                     let items = result.results[0].items_in_queue;
                     console.log('Items in queue:' + items);
 
-                    let batches = items < 50 ? 1 : items / 50;
+                    let batches = items < 20 ? 1 : items / 20;
                     batches = Math.ceil(batches);
                     console.log('batches: ' + batches);
 

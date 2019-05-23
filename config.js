@@ -2,7 +2,8 @@ let config = {
   host    : 'localhost',
   user    : 'admin',
   password: 'admin',
-  database: 'test'
+  database: 'test',
+  connectionLimit: 10
 };
 
  
