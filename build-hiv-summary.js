@@ -25,7 +25,7 @@ class BuildHivSummary {
                     let queries = [];
 
                     for(let i =0; i < batches; i++) {
-                        let qry = `call generate_hiv_summary_v15_7("build",${i},50,20);`;
+                        let qry = `call generate_hiv_summary_v15_7("build",${i},20,20);`;
                         queries.push(queryRunner.runQuery(qry));
                     }
 
