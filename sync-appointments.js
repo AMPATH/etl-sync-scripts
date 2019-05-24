@@ -3,7 +3,7 @@ let QueryRunner = require('./query-runner');
 
 let queryRunner = new QueryRunner().getInstance();
 
-class BuildAppointment {
+class SyncAppointments {
 
     constructor() {
 
@@ -11,7 +11,7 @@ class BuildAppointment {
 
     runJob() {
         return new Promise((resolve, reject) => {
-            let sql = `select count(*) as items_in_queue from etl.flat_appointment_build_queue`;
+            let sql = `select count(*) as items_in_queue from etl.flat_appointment_sync_queue`;
 
             queryRunner.runQuery(sql)
                 .then((result) => {
@@ -25,7 +25,7 @@ class BuildAppointment {
                     let queries = [];
 
                     for(let i =0; i < batches; i++) {
-                        let qry = `call generate_appointment_v1_1("build",${i},50,20);`;
+                        let qry = `call generate_appointment_v1_1("sync",${i},50,20);`;
                         queries.push(queryRunner.runQuery(qry));
                     }
 
@@ -49,4 +49,4 @@ class BuildAppointment {
 
 }
 
-module.exports = BuildAppointment;
+module.exports = SyncAppointments;

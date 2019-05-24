@@ -1,8 +1,8 @@
-let BuildAppointments = require('./build-appointments');
+let SyncAppointments = require('./sync-appointments');
 let ScheduleAppointments = require('./schedule-appointments');
 let Moment = require('moment');
 try {
-    let buildJob = new BuildAppointments();
+    let buildJob = new SyncAppointments();
     let scheduleJob = new ScheduleAppointments();
 
     let startedAt = Moment();
