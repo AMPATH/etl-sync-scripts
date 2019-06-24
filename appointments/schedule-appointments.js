@@ -1,4 +1,4 @@
-let QueryRunner = require('./query-runner');
+let QueryRunner = require('../query-runner');
 
 let queryRunner = new QueryRunner().getInstance();
 
