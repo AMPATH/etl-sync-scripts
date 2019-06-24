@@ -4,7 +4,7 @@ let queryRunner = new QueryRunner().getInstance();
 
 
 
-class HivSummary {
+class HivSummaryJob {
 
     constructor(jobType) {
         this.jobType = jobType;
@@ -56,4 +56,4 @@ class HivSummary {
 
 }
 
-module.exports = BuildHivSummary;
+module.exports = HivSummaryJob;
