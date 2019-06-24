@@ -35,4 +35,4 @@ class ScheduleAppointments {
 
 }
 
-module.exports = ScheduleHivSummary;
+module.exports = ScheduleAppointments;
